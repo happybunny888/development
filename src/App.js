@@ -109,7 +109,7 @@ function App() {
   const matchesSortingData = (item1, item2) => {
     console.log("sorting value:"+sorting)
     if (sorting==='Rating'){
-      if (item1.rating > item2.rating){
+      if (item1.rating < item2.rating){
         return 1
       }else{
         return -1
