@@ -13,8 +13,17 @@ All elements, options, and options are visible in the app. No short forms are us
 
 ### Organization of Components
 
+TicketItem Component: which is responsible for displaying each of the movie/ticket items (title of move, description of movie, price per ticket for the movie, Rotten Tomato rating, and the poster). It also contains buttons for adding (+) and subtracting (-) tickets to the cart for each movie.
+
+Aggregator Component: which is responsible for accessing the state of the cart, displaying the shopping cart (items, quantity of tickets for each, price, and total price) and having a button to clear the shopping cart.
+
+Filter Component: which is responsible for having the code for the function HandleChanged (which selects the option of filtering fromthe filter options, and changing the checked states of the filter). The code for displaying or the styling of the checkbox items for filtering type of movie is present. 
+
+Sort Component: which is responsible for having the code for the function HandleChanged (which selects the sorting type from the sort options, and changing the checked states of the sort). The code for displaying or the styling of the selection items for sorting movie is present. 
 
 ### How Data is Passed Down Through Components
 
-### How the User Triggers State Changes
+In App.js: There is a map through all the sortedData of movies which produce a TicketItem Component for each movie, in the order of sorting type. For each movie Item mapped through, the item, and the addToCart and removeFromCart functions are passed through the components. There are two calls to state in App.js, one to retrieve the filter types and one to retrieve the sort. The functions selectFilterType and selectSort, and resetFilter and resetSort, matchesFilterType and matchesSortType are defined in App.js to help generate the sortedData and filterData for the mapping of movies on the tiles. In the side bar area of the app in App.js, the components for Filter and Sort are present.
 
+### How the User Triggers State Changes
+The user triggers state changes when:the user increases or decreases the tickets to the cart, the 
